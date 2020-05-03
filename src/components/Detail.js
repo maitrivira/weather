@@ -51,7 +51,6 @@ export default function Detail({ match }) {
     <div className='detail'>
       <div className='detail-body'>
         <h1>{lists.dt}</h1>
-        {/* <h1>{moment.unix(lists.dt).format('DDDD, MMMM, YYYY')}</h1> */}
         <TableContainer component={Paper}>
           <Table className='detail-table' aria-label='a dense table'>
             <TableHead>
@@ -66,6 +65,7 @@ export default function Detail({ match }) {
                 <TableRow key={list.dt}>
                   <TableCell component='th' scope='row'>
                     {list.dt}
+                    {/* {moment.unix(lists.dt).format('DDDD, MMMM, YYYY')} */}
                   </TableCell>
                   <TableCell align='left'>{list.main.temp}C</TableCell>
                   <TableCell align='left'>

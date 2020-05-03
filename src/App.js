@@ -5,11 +5,10 @@ import { GlobalProvider } from "./context/GlobalState";
 // File
 import City from './components/City';
 import Detail from './components/Detail';
-import store from './store.js';
 
 function App() {
   return (
-    <GlobalProvider store={store}>
+    <GlobalProvider>
       <BrowserRouter>
         <Switch>
           <Route path='/' component={City} exact />
