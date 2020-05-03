@@ -18,13 +18,17 @@ export default function Detail({ match }) {
   const [error, setError] = useState('');
 
   function avg_temp() {
-    return lists.map((list) => list.main.temp).reduce((sum, i) => sum + i, 0);
+    return (
+      lists.map((list) => list.main.temp).reduce((sum, i) => sum + i, 0) / 5
+    );
   }
 
   function avg_diff() {
-    return lists
-      .map((list) => list.main.temp_max - list.main.temp_min)
-      .reduce((sum, i) => sum + i, 0);
+    return (
+      lists
+        .map((list) => list.main.temp_max - list.main.temp_min)
+        .reduce((sum, i) => sum + i, 0) / 5
+    );
   }
 
   useEffect(() => {
@@ -71,8 +75,8 @@ export default function Detail({ match }) {
               ))}
               <TableRow>
                 <TableCell align='left'>Average</TableCell>
-                <TableCell align='left'>{avg_temp()/5}C</TableCell>
-                <TableCell align='left'>{avg_diff()/5}C</TableCell>
+                <TableCell align='left'>{avg_temp()}C</TableCell>
+                <TableCell align='left'>{avg_diff()}C</TableCell>
               </TableRow>
             </TableBody>
           </Table>
