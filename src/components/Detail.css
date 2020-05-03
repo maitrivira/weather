@@ -1,0 +1,19 @@
+.detail {
+  text-align: center;
+}
+
+.detail-body {
+  background-color: #00246b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.MuiTableContainer-root{
+    padding: 20px !important;
+    width: auto !important;
+}

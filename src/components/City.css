@@ -1,0 +1,26 @@
+.city {
+  text-align: center;
+}
+
+.city-body {
+  background-color: #00246b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.root {
+  width: '100%';
+  max-width: 360;
+  background-color: white;
+  border-radius: 4px;
+  padding-top: 8px !important;
+}
+
+.nested {
+  padding-left: 40px !important;
+}
